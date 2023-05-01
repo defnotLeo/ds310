@@ -1,0 +1,7 @@
+{
+	"name": "IntergrationRuntime1",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "SHIR for grabbing on-premise data"
+	}
+}

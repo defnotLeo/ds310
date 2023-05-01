@@ -1,0 +1,34 @@
+{
+	"name": "CompleteCases",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "CompleteCases.parquet",
+				"fileSystem": "completedata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Updated",
+				"type": "DATE"
+			},
+			{
+				"name": "Confirmed",
+				"type": "INT32"
+			},
+			{
+				"name": "Country_Region",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

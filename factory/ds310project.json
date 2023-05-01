@@ -1,0 +1,9 @@
+{
+	"name": "ds310project",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7410f441-c1fe-44dd-ae3a-610f2bf35b5b",
+		"tenantId": "d57d32cc-c121-488f-b07b-dfe705680c71"
+	}
+}
