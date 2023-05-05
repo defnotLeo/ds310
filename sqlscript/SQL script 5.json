@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 5",
+	"properties": {
+		"content": {
+			"query": "IF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseParquetFormat') \n\tCREATE EXTERNAL FILE FORMAT [SynapseParquetFormat] \n\tWITH ( FORMAT_TYPE = PARQUET)\nGO\n\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'completedata_ds310team8_dfs_core_windows_net') \n\tCREATE EXTERNAL DATA SOURCE [completedata_ds310team8_dfs_core_windows_net] \n\tWITH (\n\t\tLOCATION = 'abfss://completedata@ds310team8.dfs.core.windows.net' \n\t)\nGO\n\nCREATE EXTERNAL TABLE dbo.dim_dates (\n\t[DateKey] int,\n\t[FullDate] date,\n\t[isWeekDay] bit,\n\t[DayOfWeek] int,\n\t[DayOfMonth] int,\n\t[DayOfQuarter] int,\n\t[DayOfYear] int,\n\t[DayName] nvarchar(4000),\n\t[WeekOfYear] int,\n\t[WeekName] nvarchar(4000),\n\t[MonthOfYear] int,\n\t[MonthName] nvarchar(4000),\n\t[CalendarQuarter] int,\n\t[CalendarQuarterName] nvarchar(4000),\n\t[CalendarYear] int,\n\t[FiscalMonth] int,\n\t[FiscalMonthName] nvarchar(4000),\n\t[FiscalQuarter] int,\n\t[FiscalQuarterName] nvarchar(4000),\n\t[FiscalYear] int\n\t)\n\tWITH (\n\tLOCATION = 'Dates.parquet',\n\tDATA_SOURCE = [completedata_ds310team8_dfs_core_windows_net],\n\tFILE_FORMAT = [SynapseParquetFormat]\n\t)\nGO\n\n\nSELECT TOP 100 * FROM dbo.dim_dates\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "ds310",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
