@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=covid19-sqlserver-f7vnkxq77cqge.database.windows.net;initial catalog=covid19;user id=sqladmin",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNTlhYTAwZC02MjY1LTRiMjMtOGNjNi0xYWVhYzc2ZjlhZWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=False;data source=covid19;initial catalog=covid19;user id=sqladmin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyYWM1YTdkZC05Y2Y3LTQwMGQtYWI3MS1hN2ViMjFlNmZjODEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "IntergrationRuntime1",
