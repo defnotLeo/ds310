@@ -17,8 +17,14 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"ds310-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:ds310.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://ds310team8.dfs.core.windows.net/"
+		},
+		"ds310-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://ds310team8.dfs.core.windows.net"
 		}
 	}
 }

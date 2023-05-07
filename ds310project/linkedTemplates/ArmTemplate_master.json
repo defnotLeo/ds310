@@ -23,9 +23,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"ds310-WorkspaceDefaultSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ds310-WorkspaceDefaultSqlServer'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:ds310.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://ds310team8.dfs.core.windows.net/"
+		},
+		"ds310-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ds310team8.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -57,9 +66,6 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
-					"AzureSqlDatabase1_connectionString": {
-						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
-					},
 					"CosmosDbNoSql_connectionString": {
 						"value": "[parameters('CosmosDbNoSql_connectionString')]"
 					},
@@ -84,8 +90,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"ds310-WorkspaceDefaultSqlServer_connectionString": {
+						"value": "[parameters('ds310-WorkspaceDefaultSqlServer_connectionString')]"
+					},
+					"ds310-WorkspaceDefaultStorage_properties_typeProperties_url": {
+						"value": "[parameters('ds310-WorkspaceDefaultStorage_properties_typeProperties_url')]"
 					}
 				}
 			},
